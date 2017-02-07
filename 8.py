@@ -1,5 +1,6 @@
 from functools import reduce
 from operator import mul
+from patrick import prod
 
 DATA = (
 "73167176531330624919225119674426574742355349194934"
@@ -29,6 +30,6 @@ LENGTH = 13
 fragments = map(lambda i: DATA[i : i + LENGTH],
     range(0, len(DATA) - LENGTH + 1))
 
-products = map(lambda f: reduce(mul, (map(int, f))), fragments)
+products = map(lambda f: prod(map(int, f)), fragments)
 
 print(max(products))
