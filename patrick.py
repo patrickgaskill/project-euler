@@ -1,3 +1,6 @@
+from functools import reduce
+from operator import mul
+
 def is_prime(n):
     if n == 2:
         return True
@@ -22,3 +25,6 @@ def is_prime(n):
         w = 6 - w
 
     return True
+
+def prod(a):
+    return reduce(mul, a)
