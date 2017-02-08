@@ -27,9 +27,6 @@ DATA = (
 
 LENGTH = 13
 
-fragments = map(lambda i: DATA[i : i + LENGTH],
-    range(0, len(DATA) - LENGTH + 1))
-
-products = map(lambda f: prod(map(int, f)), fragments)
-
+fragments = [DATA[i : i + LENGTH] for i in range(0, len(DATA) - LENGTH + 1)]
+products = [prod(int(x) for x in f) for f in fragments]
 print(max(products))

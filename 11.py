@@ -24,7 +24,7 @@ DATA = """\
 """
 LENGTH = 4
 
-grid = list(map(lambda s: list(map(int, s.split(' '))), DATA.split("\n")))
+grid = [[int(c) for c in s.split(' ')] for s in DATA.split("\n")]
 max_product = 0
 
 # horizontal

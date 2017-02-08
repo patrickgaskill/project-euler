@@ -5,4 +5,4 @@ while True:
     else:
         fibs.append(fibs[-1] + fibs[-2])
 
-print(sum(filter(lambda x: x % 2 == 0, fibs)))
+print(sum(x for x in fibs if x % 2 == 0))
