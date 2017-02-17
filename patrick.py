@@ -5,7 +5,6 @@ from math import sqrt
 def is_prime(n):
     if n < 2:
         return False
-        
     if n == 2:
         return True
 
@@ -36,3 +35,6 @@ def prod(a):
 def factors(n):
     return set(reduce(list.__add__,
                 ([i, n//i] for i in range(1, int(sqrt(n)) + 1) if n % i == 0)))
+
+def tup2int(t):
+    return int(''.join(t))
